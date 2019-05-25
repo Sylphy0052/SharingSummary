@@ -1,6 +1,6 @@
 # プロジェクト管理
 ## タブ
-GitHubのリポジトリのメイン画面
+GitHubのリポジトリのメイン画面
 - Code: ソースコードが見れる
 - Issues
 - Pull requests
@@ -9,11 +9,11 @@ GitHubのリポジトリのメイン画面
 ## リポジトリの初期設定
 1. リポジトリを作る
 2. Settingタブ→Collaboratorsタブ→共同開発者を追加
-3. Projectsタブ→Create a project→Project board name，(Description),を書いて，Project templateをAutomated kanban with reviewsに設定する
+3. Projectsタブ→Create a project→Project board name，(Description),を書いて，Project templateをAutomated kanban with reviewsに設定する
 
 ![](./figs/project-1.png)
 
-機能毎に分けるか，日付ごとに分けるかなど工夫することでToDoを見やすくできる
+機能毎に分けるか，日付ごとに分けるかなど工夫することでToDoを見やすくできる
 
 4. To doカラムのManageの設定
 
@@ -48,16 +48,16 @@ GitHubのリポジトリのメイン画面
 - 0.優先度(高)
 - 0.優先度(中)
 - 0.優先度(低)
-- 0.優先度(なし)
+- 0.優先度(なし)
 - 1.バグ
 - 1.機能追加
 - 1.機能変更
-- 1.デザイン
-- 1.質問/相談
+- 1.デザイン
+- 1.質問/相談
 - 1.リファクタリング
 - 1.その他
 - 99.再現しない
-- 99.おたすけ要請
+- 99.おたすけ要請
 - WIP
 - レビュー待ち
 
@@ -82,8 +82,8 @@ GitHubのリポジトリのメイン画面
 ---
 name: バグ報告
 about: バグの報告
-title: "[BUG]: " ←プレフィックスを付けると分かりやすい
-labels: バグ報告 ←設定したラベルと同じもの
+title: "[BUG]: " ←プレフィックスを付けると分かりやすい
+labels: バグ報告 ←設定したラベルと同じもの
 assignees: ''
 
 ---
@@ -150,13 +150,13 @@ close/fix/resolve #<issue番号>
 - Title: Issueの概要
 - Comment: Issueの細かい内容
 - Assignees: 担当者
-- Labels: 作ったラベルを選択する．少なくとも0と1は必ずつける
-- Projects: どのプロジェクトボードで管理するかの紐付け
-- Milestone: 作ったマイルストーンを選択する
+- Labels: 作ったラベルを選択する．少なくとも0と1は必ずつける
+- Projects: どのプロジェクトボードで管理するかの紐付け
+- Milestone: 作ったマイルストーンを選択する
 
 CommentにはMarkdown記法が使える．書き方は[こちら](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)を参照．
 
-Assigneesは基本空にしておいて，担当者が決まったら追加する．
+Assigneesは基本空にしておいて，担当者が決まったら追加する．
 
 ![](./figs/project-13.png)
 
@@ -181,19 +181,19 @@ fix #1
 - fix
 - resolve
 
-## 開発者フロー
+## 開発者フロー
 1. Issueを作る(PMがやってもよい)
-2. Projectsのプロジェクトボードの`To do`から`In progress`に移動させる
-2. Branchを作る(基本的には`issue001`などissueでブランチ名をつける)
+2. Projectsのプロジェクトボードの`To do`から`In progress`に移動させる
+2. Branchを作る(基本的には`issue001`などissueでブランチ名をつける)
 3. 空コミットする
 4. 途中でタイトルに`[WIP]`をつけてプルリクエストを出す(ToDoリストや終わっていないことを書いておくと良い)
 5. レビュアをアサインする(基本PMなど全体がわかっている人)
 6. コードを書く
 7. 終わったら`[WIP]`を外し，レビュアにメンション(`@ユーザ名`)する
-8. Projectsのプロジェクトボードの`In progress`から`Review in progress`に移動させる
+8. Projectsのプロジェクトボードの`In progress`から`Review in progress`に移動させる
 8. レビューを受けコードを修正する
 9. うまくいったらマージしてもらう
-10. 1に戻る
+10. 1に戻る
 
 ## PMフロー
 1. Issueを作る
