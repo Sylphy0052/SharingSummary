@@ -90,15 +90,85 @@ $ git commit -m "<コミットメッセージ>"
 #### ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)
 
 ```shell
+$ git push <レポジトリのURLの別名> <ブランチ名>
 # originのmasterブランチにプッシュする
 $ git push origin master
 ```
 
 <a name="readme"></a>
-## README
+### README
+このシステムの説明書的な文書ファイル．
+通常Markdown方式で書かれている．
 
 <a name="gitignore"></a>
-## gitignore
+### gitignore
+`.gitignore`ファイルを使用すると，コミットを無視するファイルやディレクトリを指定することができる．
+ビルドファイルや個人的に作ったものをここに記入し，コミットしないようにする．
+
+例えば，`test.txt`ファイルや`build`ディレクトリ以下のものを無視したい場合，
+```
+test.txt
+/build
+```
+と書く．
+
+<a name="branch"></a>
+## ブランチの使い方
+
+```shell
+# ブランチの一覧
+$ git branch
+# ブランチの作成
+$ git branch <ブランチ名>
+# ブランチの移動
+$ git checkout <ブランチ名>
+# ブランチを作成しつつ移動
+$ git checkout -b <ブランチ名>
+# masterブランチにdevelopの内容をpullする
+$ git checkout master
+$ git pull origin develop
+# ブランチの削除
+$ git branch -d <ブランチ名>
+```
+
+### マージ
+機能ごとにブランチを作って開発を行い，テストが終了したらそれを別のブランチに取り込む．この取り込むことを`マージ(merge)`という．
+
+```shell
+# func1ブランチをdevelopブランチに取り込む
+$ git checkout develop
+$ git merge func1
+# 最後にpushする
+$ git push origin develop
+```
+
+### つまり…
+1. developブランチから新規ブランチを作る
+2. プログラムを作成する
+3. addする
+4. commitする
+5. 2~4を繰り返す
+6. pushする
+
+という流れになる．
+
+```shell
+# developブランチに切り替える
+$ git checkout develop
+# developブランチを最新状態にする
+$ git pull origin develop
+# ブランチを切ってブランチを変更する
+$ git checkout -b <ブランチ名>
+# 編集
+# addする
+$ git add <ファイル名>
+# commitする
+$ git commit -m "<コミットメッセージ>"
+# add,commitをこまめに繰り返す
+# ある程度機能ができたらpushする
+$ git push origin <ブランチ名>
+# 最初に戻る
+```
 
 <a name="ref"></a>
 ## 参考
