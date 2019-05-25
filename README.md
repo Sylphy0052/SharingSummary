@@ -5,9 +5,3 @@
 [GitHubについて](./GitHub/ABOUT.md)
 
 [Projectの進め方](./GitHub/PROJECT.md)
-
-## Python
-
-### Flask
-
-### Django
