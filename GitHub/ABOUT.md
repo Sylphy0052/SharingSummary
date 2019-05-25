@@ -29,13 +29,14 @@ GitHub: ソースコード管理システム
 
 ## GitHubの流れ(Web(GitHub)とCUI(コマンドプロンプト/ターミナル))
 
-1. [GitHubでリポジトリを作成する](#リポジトリの作成)
-2. [リモートリポジトリからローカルリポジトリに持ってくる(clone/クローン)](#クローン)
+1. [GitHubでリポジトリを作成する](#repository)
+2. [リモートリポジトリからローカルリポジトリに持ってくる(clone/クローン)](#clone)
 3. ファイルを作成/編集/削除する
-4. [ファイルの作成/編集/削除をgitのインデックスに追加する](#ファイルの作成/編集/削除をgitのインデックスに追加する)
-5. [変更結果をローカルリポジトリにコミットする](#変更結果をローカルリポジトリにコミットする)
-6. [ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)](#ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる))
+4. [ファイルの作成/編集/削除をgitのインデックスに追加する](#add)
+5. [変更結果をローカルリポジトリにコミットする](#commit)
+6. [ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)](#push)
 
+<a name="repository">
 #### リポジトリの作成
 ![](./figs/about-2.png)
 
@@ -51,6 +52,7 @@ GitHub: ソースコード管理システム
 - Add .gitignore: [gitignore](#gitignore)のデフォルト設定
 - Add a license: ライセンスを追加するかどうか
 
+<a name="clone">
 #### クローン
 
 ![](./figs/about-4.png)
@@ -65,6 +67,7 @@ Cloning into 'SharingSummary'...
 warning: You appear to have cloned an empty repository.
 ```
 
+<a name="add">
 #### ファイルの作成/編集/削除をgitのインデックスに追加する
 
 ```shell
@@ -75,6 +78,7 @@ $ git add <ファイル名>
 ~/G/SharingSummary ❯❯❯ git add README.md
 ```
 
+<a name="commit">
 #### 変更結果をローカルリポジトリにコミットする
 
 ```shell
@@ -82,6 +86,7 @@ $ git add <ファイル名>
 $ git commit -m "<コミットメッセージ>"
 ```
 
+<a name="push">
 #### ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)
 
 ```shell
@@ -89,9 +94,12 @@ $ git commit -m "<コミットメッセージ>"
 $ git push origin master
 ```
 
+<a name="readme">
 ## README
 
+<a name="gitignore">
 ## gitignore
 
+<a name="ref">
 ## 参考
 - [今さら聞けない！GitHubの使い方【超初心者向け】](https://techacademy.jp/magazine/6235)
