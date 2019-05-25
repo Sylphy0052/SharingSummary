@@ -22,15 +22,21 @@ GitHub: ソースコード管理システム
 
 ## ブランチ
 ソフトウェアの開発では，現在リリースしているバージョンのメンテナンスをしながら新たな機能追加やバグ修正を行うことがある．
-このように，並行すて行われる複数のバージョン管理を行うためにGitにはブランチ(branch)という機能がある．
+このように，並行して行われる複数のバージョン管理を行うためにGitにはブランチ(branch)という機能がある．
 
 ブランチは履歴の流れを分岐して記録していくものである．
 分岐したブランチは他のブランチの影響を受けないため，同じリポジトリ内でそれぞれの開発を行っていくことができる．
 
-## GitHubの流れ
+## GitHubの流れ(Web(GitHub)とCUI(コマンドプロンプト/ターミナル))
 
-1. GitHubでリポジトリを作成する
+1. [GitHubでリポジトリを作成する](#リポジトリの作成)
+2. [リモートリポジトリからローカルリポジトリに持ってくる(clone/クローン)](#クローン)
+3. ファイルを作成/編集/削除する
+4. [ファイルの作成/編集/削除をgitのインデックスに追加する](#ファイルの作成/編集/削除をgitのインデックスに追加する)
+5. [変更結果をローカルリポジトリにコミットする](#変更結果をローカルリポジトリにコミットする)
+6. [ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)](#ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる))
 
+#### リポジトリの作成
 ![](./figs/about-2.png)
 
 ---
@@ -42,42 +48,50 @@ GitHub: ソースコード管理システム
 - Description(optional): そのリポジトリの名前
 - Public/Private: そのリポジトリを公開する(Public)か公開しない(Private)か
 - Initialize this repository with a README: [README](#README)をトップページに追加するかどうか
-- Add .gitignore: gitignoreのデフォルト設定
+- Add .gitignore: [gitignore](#gitignore)のデフォルト設定
 - Add a license: ライセンスを追加するかどうか
 
+#### クローン
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+![](./figs/about-4.png)
+
+ここのURLをコピーして使用する
+
+```shell
+$ git clone https://github.com/<Owner名>/<リポジトリ名>.git
+
+~/GitHub ❯❯❯ git clone https://github.com/Sylphy0052/SharingSummary.git
+Cloning into 'SharingSummary'...
+warning: You appear to have cloned an empty repository.
+```
+
+#### ファイルの作成/編集/削除をgitのインデックスに追加する
+
+```shell
+# ファイルの状態を表示する
+$ git status
+# ファイルを追加する
+$ git add <ファイル名>
+~/G/SharingSummary ❯❯❯ git add README.md
+```
+
+#### 変更結果をローカルリポジトリにコミットする
+
+```shell
+# コミットする
+$ git commit -m "<コミットメッセージ>"
+```
+
+#### ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)
+
+```shell
+# originのmasterブランチにプッシュする
+$ git push origin master
+```
 
 ## README
+
+## gitignore
 
 ## 参考
 - [今さら聞けない！GitHubの使い方【超初心者向け】](https://techacademy.jp/magazine/6235)
