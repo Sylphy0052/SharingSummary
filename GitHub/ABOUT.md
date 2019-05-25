@@ -36,7 +36,7 @@ GitHub: ソースコード管理システム
 5. [変更結果をローカルリポジトリにコミットする](#commit)
 6. [ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)](#push)
 
-<a name="repository">
+<a name="repository"></a>
 #### リポジトリの作成
 ![](./figs/about-2.png)
 
@@ -52,7 +52,7 @@ GitHub: ソースコード管理システム
 - Add .gitignore: [gitignore](#gitignore)のデフォルト設定
 - Add a license: ライセンスを追加するかどうか
 
-<a name="clone">
+<a name="clone"></a>
 #### クローン
 
 ![](./figs/about-4.png)
@@ -67,7 +67,7 @@ Cloning into 'SharingSummary'...
 warning: You appear to have cloned an empty repository.
 ```
 
-<a name="add">
+<a name="add"></a>
 #### ファイルの作成/編集/削除をgitのインデックスに追加する
 
 ```shell
@@ -78,7 +78,7 @@ $ git add <ファイル名>
 ~/G/SharingSummary ❯❯❯ git add README.md
 ```
 
-<a name="commit">
+<a name="commit"></a>
 #### 変更結果をローカルリポジトリにコミットする
 
 ```shell
@@ -86,7 +86,7 @@ $ git add <ファイル名>
 $ git commit -m "<コミットメッセージ>"
 ```
 
-<a name="push">
+<a name="push"></a>
 #### ローカルリポジトリでコミットした内容をリモートリポジトリへプッシュする(反映させる)
 
 ```shell
@@ -94,12 +94,12 @@ $ git commit -m "<コミットメッセージ>"
 $ git push origin master
 ```
 
-<a name="readme">
+<a name="readme"></a>
 ## README
 
-<a name="gitignore">
+<a name="gitignore"></a>
 ## gitignore
 
-<a name="ref">
+<a name="ref"></a>
 ## 参考
 - [今さら聞けない！GitHubの使い方【超初心者向け】](https://techacademy.jp/magazine/6235)
